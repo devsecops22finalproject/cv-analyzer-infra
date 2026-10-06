@@ -1,0 +1,25 @@
+{
+  "title": "Job Screener",
+  "panels": [
+    {
+      "title": "Screening request rate",
+      "targets": [{ "expr": "rate(screening_requests_total[5m])" }]
+    },
+    {
+      "title": "AI failures",
+      "targets": [{ "expr": "ai_failures_total" }]
+    },
+    {
+      "title": "p95 scoring latency",
+      "targets": [
+        {
+          "expr": "histogram_quantile(0.95, screening_duration_seconds_bucket)"
+        }
+      ]
+    },
+    {
+      "title": "Average score per job (API poll: GET /api/analytics/overview)",
+      "targets": []
+    }
+  ]
+}
