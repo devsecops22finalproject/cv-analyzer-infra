@@ -15,6 +15,6 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: ${DOCKERHUB_USER}/job-screener-frontend:latest
+          image: eliaor360/cv-analyzer-frontend:latest
           ports:
             - containerPort: 80

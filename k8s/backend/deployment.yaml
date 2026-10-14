@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ${DOCKERHUB_USER}/job-screener-backend:latest
+          image: eliaor360/cv-analyzer-backend:latest
           ports:
             - containerPort: 5000
           env:
